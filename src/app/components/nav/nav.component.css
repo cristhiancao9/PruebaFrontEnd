@@ -1,0 +1,86 @@
+.contenedorNav {
+  height: 60px;
+  display: flex;
+  /* background: red; */
+  /*    width: 390px; */
+  justify-content: space-between;
+}
+
+.contenedoImagen {
+  display: flex;
+  width: 125px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorMenu {
+  /* background: brown; */
+  display: flex;
+  width: 210px;
+}
+
+.contenedorBoton {
+  /* background: rosybrown; */
+  display: flex;
+  width: 130px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorHamburguesa {
+  /* background: yellow; */
+  display: flex;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagenLogo {
+  width: 120px;
+  height: 60px;
+  margin-left: 5px;
+}
+
+.btnIniciarSesion {
+  background: #403372;
+  height: 30px;
+  border-radius: 15px;
+  color: white;
+  width: 120px;
+  border: none;
+  font-size: medium;
+}
+
+.hamburguesa {
+  height: 40px;
+  width: 60px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  /* background-color: aqua; */
+  justify-content: center;
+}
+
+.primeraLinea {
+  height: 6px;
+  width: 40px;
+  margin-bottom: 5px;
+  background: white;
+  border-radius: 8px;
+}
+
+.ultimaLinea {
+  height: 6px;
+  width: 40px;
+  border-radius: 8px;
+  background: white;
+}
+
+@media (min-width: 768px) {
+  .imagenLogo {
+    width: 300px;
+
+    margin-left: 15px;
+  }
+}

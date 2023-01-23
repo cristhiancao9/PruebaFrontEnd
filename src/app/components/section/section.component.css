@@ -1,0 +1,308 @@
+.contenedorPrincipalSection {
+    display: flex;
+    /* background-color: goldenrod; */
+    flex-direction: column;
+    /* width: 390px;
+    height: 500px; */
+    align-items: center;
+}
+
+.imagenPrincipal {
+    max-width: 100%;
+    max-height: 100%;
+    background-size: auto;
+    /*    height: 620px; */
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+}
+
+.ContendorTextoPrincipal {
+    display: flex;
+}
+
+.textoPrincipal {
+    position: absolute;
+    width: 238px;
+    height: 141px;
+    left: 28px;
+    top: 80px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 26px;
+    /* or 93% */
+
+
+    color: #D9D9D9;
+}
+
+.lineaDivision {
+    width: 90%;
+}
+
+.contenedorModal {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    /*     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  
+    background: rgba(0, 0, 0.4, 0);
+    box-shadow: 0px 0px 10px #ccc; */
+}
+
+.contenedorForm {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tituloModal {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 26px;
+    color: #3D1381;
+    color: white;
+}
+
+.contenedorPrimerInput {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input {
+    background: #FFFFFF;
+    box-shadow: 5px 5px 10px gray;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: medium;
+    text-align: center;
+
+}
+
+.imagenPrimerInput {
+    width: 30px;
+    height: 30px;
+    /* background: red; */
+}
+
+.contenedorSegundoInput {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.imagenSegundoInput {
+    width: 30px;
+    height: 30px;
+    /* background: red; */
+}
+
+.contenedorBtnBuscar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #F73A6D;
+    border-radius: 15px;
+    border: none;
+    width: 123px;
+    height: 45px;
+    color: white;
+    font-size: medium;
+}
+
+
+/* .contenedorRespuesta {
+    display: flex;
+} */
+
+.contenedorCard {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    /*    width: 95%; */
+    margin: 16px;
+    padding: 16px;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    /*     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0.4, 0); */
+}
+
+.cardEncabezado {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 16px;
+    border-top-left-radius: 8px;
+    align-items: center;
+    border-top-right-radius: 8px;
+}
+
+.mensajeRespuesta {
+    color: #F73A6D;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.cardContenido {
+    padding: 16px;
+}
+
+.imagenEncabezado {
+    width: 90%;
+
+}
+
+.contenedorRespuestas {
+    display: flex;
+}
+
+.respuestas {
+    width: 50%;
+    padding: 16px;
+    /*     background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenedorValores {
+    /*     background: #F73A6D; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textoTitulo {
+    font-size: x-large;
+    color: #3D1381;
+    font-weight: bold;
+}
+
+.textoValor {
+    font-size: medium;
+    color: black;
+}
+
+.textoTituloSelect {
+    font-size: medium;
+    color: black;
+}
+
+
+
+@media (min-width: 766px) {
+    .imagenPrincipal {
+        position: relative;
+        border-radius: 0px;
+    }
+
+    .lineaDivision {
+        display: none;
+    }
+
+    .contenedorModal {
+        position: absolute;
+        top: 230px;
+        /*  width: 50%; */
+
+    }
+
+    .textoPrincipal {
+
+        font-size: 34px;
+        line-height: 44px;
+        width: 95%;
+        justify-content: center;
+        left: 28px;
+        display: flex;
+    }
+
+    .contenedorCard {
+        position: absolute;
+        top: 550px;
+        width: 50%;
+    }
+
+    /*   .ContendorTextoPrincipal {
+        display: flex;
+        justify-content: center;
+    } */
+    .mensajeRespuesta {
+        color: #F73A6D;
+        font-size: xx-large;
+        margin-top: 20px;
+    }
+
+    .contenedorValores {
+        /*   background: #F73A6D; */
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .contenedorModal {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        background: rgba(0, 0, 0.4, 0);
+        box-shadow: 0px 0px 10px #ccc;
+    }
+
+    .card {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0.4, 0);
+    }
+
+
+    .textoTitulo {
+        font-size: xx-large;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .textoValor {
+        font-size: x-large;
+        color: #b5b5bc52;
+    }
+
+    .textoTituloSelect {
+        font-size: xx-large;
+        color: white;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        background: rgba(0, 0, 0.4, 0);
+        box-shadow: 0px 0px 10px #ccc;
+
+    }
+
+}

@@ -1,0 +1,144 @@
+<section class="contenedorPrincipalSection">
+  <img
+    class="imagenPrincipal"
+    src="https://cdn.pixabay.com/photo/2015/09/07/19/12/hotel-928937_1280.jpg"
+    alt=""
+  />
+  <div class="ContendorTextoPrincipal">
+    <p class="textoPrincipal">
+      Reserva tu viaje con nosotros y aprovecha los descuentos que tenemos para
+      ti.
+    </p>
+  </div>
+  <hr class="lineaDivision" />
+
+  <div class="contenedorModal">
+    <div></div>
+    <form class="contenedorForm" action="">
+      <div>
+        <h1 class="tituloModal">¿A donde quieres ir?</h1>
+      </div>
+
+      <div class="contenedorPrimerInput">
+        <img class="imagenPrimerInput" src="./assets/idaa.png" alt="" />
+        <input
+          [(ngModel)]="origen"
+          (ngModelChange)="consoleLog()"
+          (ngModelChange)="origen = $event.toUpperCase()"
+          [ngModelOptions]="{ standalone: true }"
+          pattern="^[^0-9]*$"
+          minlength="3"
+          maxlength="3"
+          class="input"
+          type="text"
+          name="Origen"
+          id=""
+          placeholder="Origen"
+        />
+      </div>
+      <div class="contenedorSegundoInput">
+        <img class="imagenSegundoInput" src="./assets/llegada.png" alt="" />
+        <input
+          [(ngModel)]="destino"
+          (ngModelChange)="consoleLog()"
+          (ngModelChange)="destino = $event.toUpperCase()"
+          [ngModelOptions]="{ standalone: true }"
+          pattern="^[^0-9]*$"
+          minlength="3"
+          maxlength="3"
+          class="input"
+          type="text"
+          name="Destino"
+          id=""
+          placeholder="Destino"
+        />
+      </div>
+
+      <button (click)="getData()" class="contenedorBtnBuscar">Buscar</button>
+    </form>
+  </div>
+
+  <!--   <div class="contenedorRespuesta">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div> -->
+
+  <hr class="lineaDivision" />
+  <div class="contenedorCard">
+    <div class="card" *ngIf="respuesta?.obj">
+      <div class="cardEncabezado">
+        <img
+          class="imagenEncabezado"
+          src="https://www.newshore.es/media/1411/newshore-by_flyr-logo.svg"
+          alt=""
+        />
+        <div class="mensajeRespuesta">{{ respuesta?.msg }}</div>
+      </div>
+      <div class="cardContenido">
+        <div class="contenedorRespuestas">
+          <div class="respuestas">
+            <div class="contenedorValores">
+              <div class="textoTitulo">Origen:</div>
+              <div class="textoTituloSelect">{{ respuesta?.obj?.Origen }}</div>
+            </div>
+            <div class="contenedorValores">
+              <div class="textoTitulo">Destino:</div>
+              <div class="textoTituloSelect">
+                {{ respuesta?.obj?.Destino }}
+              </div>
+            </div>
+            <tr>
+              <td colspan="5">
+                <label class="textoTitulo">Conversión de moneda:</label>
+                <select
+                  class="textoTituloSelect"
+                  [(ngModel)]="monedaSeleccionada"
+                  (change)="convertirMoneda()"
+                >
+                  <option value="USD">Dolar</option>
+                  <option value="COP">Peso Colombiano</option>
+                  <option value="MXN">Peso Mexicano</option>
+                </select>
+              </td>
+            </tr>
+          </div>
+          <div class="respuestas">
+            <div class="contenedorValores">
+              <div class="textoTitulo">Aerolínea:</div>
+              <div class="textoTituloSelect">
+                {{ respuesta?.obj?.Aerolinea }}
+              </div>
+            </div>
+
+            <div class="contenedorValores">
+              <div class="textoTitulo">N° vuelo:</div>
+              <div class="textoTituloSelect">
+                {{ respuesta?.obj?.NumeroVuelo }}
+              </div>
+            </div>
+
+            <div class="contenedorValores" *ngIf="monedaSeleccionada === 'MXN'">
+              <div class="textoTitulo">Precio:</div>
+              <div class="textoTituloSelect">MX {{ auxValorMoneda }}</div>
+            </div>
+            <div class="contenedorValores" *ngIf="monedaSeleccionada === 'COP'">
+              <div class="textoTitulo">Precio:</div>
+              <div class="textoTituloSelect">$ {{ auxValorMoneda }}</div>
+            </div>
+            <div class="contenedorValores" *ngIf="monedaSeleccionada === 'USD'">
+              <div class="textoTitulo">Precio:</div>
+              <div class="textoTituloSelect">
+                USD {{ respuesta.obj.Precio }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- src="https://cdn.pixabay.com/photo/2015/09/07/19/12/hotel-928937_1280.jpg"
+     (ngModelChange)="consoleLog()"
+-->

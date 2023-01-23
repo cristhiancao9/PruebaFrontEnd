@@ -1,0 +1,23 @@
+.toolbar {
+
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #10004F;
+    color: white;
+    font-weight: 600;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contenedorNav {
+    width: 100%
+}
+
+.contendorSection {
+    width: 100%;
+    /* background: greenyellow; */
+}
